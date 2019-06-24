@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: qq123456
+    url: jdbc:mysql://localhost:3306/tdoor_user?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+  profiles:
+    active: dev
+  mail:
+    host: smtp.sina.cn
+    username: 18077534321@sina.cn
+    password: 1946626878
+    port: 25
+    default-encoding: UTF-8
+    protool: stmp
+    properties:
+       mail:
+        smth:
+          auth: true
+          strttls:
+            enable: true
+            required: true
+server:
+  tomcat:
+    uri-encoding: utf-8
+  port: 8087
+  servlet:
+    context-path: /
+#在application.properties文件中引入日志配置文件
+logging:
+  config:
+    classpath: logback-boot.xml
